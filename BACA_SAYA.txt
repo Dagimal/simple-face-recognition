@@ -1,0 +1,16 @@
+Program ini membutuhkan library :
+- OpenCV
+- face_recognition
+- numpy
+
+created by : - Daffa' Gifari Akmal
+	     - Fadel Januar Alfiansyah
+             - Zulfira Indah Astuti
+
+
+CARA PAKAI :
+1. masukkan foto yang ingin di training pada direktori training_img
+2. panggil nama file foto yang akan di training(tambahkan pada script training.py) [training_img/namafilefoto]
+3. masukkan foto lain yang akan di kenali pada direktori person 
+4. panggil nama file foto yang akan di kenali [person/namafilefoto]
+5. program akan mencoba mengenali kemudian menampilkan dalam bentuk window beserta box dan nama pada wajah

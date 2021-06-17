@@ -5,8 +5,6 @@ Program ini membutuhkan library :
 
 created by : - Daffa' Gifari Akmal
 	     - Fadel Januar Alfiansyah
-             - Zulfira Indah Astuti
-
 
 CARA PAKAI :
 1. masukkan foto yang ingin di training pada direktori training_img

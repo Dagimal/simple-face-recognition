@@ -17,6 +17,7 @@ def banner():
 		"""
 	)
 banner()
+print("\n")
 # LOAD_IMAGE_TRAINING
 face_1 = face_recognition.load_image_file("training_img/fadel.jpeg")
 face_1_encoding = face_recognition.face_encodings(face_1)[0]
@@ -39,12 +40,11 @@ print("Proses Matching Selesai")
 
 #### BATAS MATCHING DATA ###
 # MATCHING_DENGAN_FOTO_LAIN
-list_file = os.listdir("person")
-loop = -1
-while loop <= len(list_file):
-    try:
-        loop += 1
-        file_name = "person/"+list_file[loop]
+#loop = -1
+#while loop <= len(list_file):
+try:
+        #loop += 1
+        file_name = "person/5.png"
         unknown_image = face_recognition.load_image_file(file_name)
         unknown_image_to_draw = cv2.imread(file_name)
 
@@ -74,5 +74,5 @@ while loop <= len(list_file):
         cv2.imshow(frame, unknown_image_to_draw)
         cv2.waitKey(0)
         cv2.destroyAllWindows()
-    except Exception as e:
+except Exception as e:
         print(e)

@@ -1,0 +1,43 @@
+#import face_recognition
+from tqdm import tqdm
+import os
+
+
+def training():
+	list_dir = os.listdir("training_img")
+	loop = -1
+	while loop <== len(list_dir):
+		loop += 1
+		print("GAMBAR SEDANG DI TRAINING ...")
+
+		## menulis untuk training_data.py menggunakan for, membaca dari folder training_img
+		f = open("training_data_contoh.py", "w")
+		
+		print('face_'+str(loop+1) + ' = face_recognition.load_image_file("training_img/'+i+'")', file=f)
+		print('face_'+str(loop+1)+'_encoding = face_recognition.face_encodings(face_' + str(loop) + ')[0]', file=f)
+		#face_1 = face_recognition.load_image_file("training_img/fadel.jpeg")
+		#face_1_encoding = face_recognition.face_encodings(face_1)[0]
+
+		#face_2 = face_recognition.load_image_file("training_img/daffa.jpg")
+		#face_2_encoding = face_recognition.face_encodings(face_2)[0]
+		for i in range(loop):
+			print('known_face_encodings = [', file=f)
+			faceEncoding = 'face_'+str(loop)+'_encoding'
+			print(faceEncoding, end="", file=f)
+			if loop < len(list_dir):
+				print(end=",", file=f)
+		#known_face_encodings = [face_1_encoding,face_2_encoding]
+
+		#known_face_names = ["fadel","daffa"]
+
+
+print("++ PASTIKAN NAMA FILE SUDAH SESUAI DENGAN NAMA ORANG ++")
+
+print("Lanjut? [y/N]")
+choice = input(">> ")
+
+if choice == "y" or choice == "Y":
+	training()
+	print("training data sudah berhasil di build!")
+elif choice == "n" or choice == "N":
+	exit()

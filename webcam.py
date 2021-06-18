@@ -11,6 +11,7 @@ mencocokkan wajah pada foto sampel yang kita berikan.
 """
 
 import face_recognition
+from training_data_contoh import *
 import cv2
 import numpy as np
 
@@ -18,21 +19,21 @@ import numpy as np
 video_capture = cv2.VideoCapture(0)
 
 # load sampel gambar dan mencocokkan
-obama_image = face_recognition.load_image_file("training_img/fadel.jpeg")
-obama_face_encoding = face_recognition.face_encodings(obama_image)[0]
+#obama_image = face_recognition.load_image_file("training_img/fadel.jpeg")
+#obama_face_encoding = face_recognition.face_encodings(obama_image)[0]
 
-biden_image = face_recognition.load_image_file("training_img/daffa.jpg")
-biden_face_encoding = face_recognition.face_encodings(biden_image)[0]
+#biden_image = face_recognition.load_image_file("training_img/daffa.jpg")
+#biden_face_encoding = face_recognition.face_encodings(biden_image)[0]
 
 # membuat list nama wajah sesuai dengan gambar sampel diatas
-known_face_encodings = [
-    obama_face_encoding,
-    biden_face_encoding
-]
-known_face_names = [
-    "Fadel Januar A.",
-    "Daffa Gifari Akmal"
-]
+#known_face_encodings = [
+#    obama_face_encoding,
+#    biden_face_encoding
+#]
+#known_face_names = [
+#    "Fadel Januar A.",
+#    "Daffa Gifari Akmal"
+#]
 
 while True:
     # Mengambil tiap frame dari video
@@ -69,7 +70,7 @@ while True:
         # Draw a label with a name below the face
         cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (0, 0, 255), cv2.FILLED)
         font = cv2.FONT_HERSHEY_DUPLEX
-        cv2.putText(frame, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
+        cv2.putText(frame, name.replace(".jpg",""), (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
 
     # Menampilkan hasil gambar
     cv2.imshow('Video', frame)

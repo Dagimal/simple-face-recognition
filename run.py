@@ -4,6 +4,7 @@ from PIL import Image, ImageDraw
 from training_data import *
 import cv2
 import os
+import easygui
 
 def banner():
 	print(
@@ -19,10 +20,8 @@ def banner():
 	)
 
 def photoFaceRecognition():
-	print("Proses Matching Selesai")
-
 	try:
-		file_name = "person/5.png"
+		file_name = easygui.fileopenbox()
 		unknown_image = face_recognition.load_image_file(file_name)
 		unknown_image_to_draw = cv2.imread(file_name)
 	

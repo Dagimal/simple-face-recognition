@@ -11,7 +11,7 @@ mencocokkan wajah pada foto sampel yang kita berikan.
 """
 
 import face_recognition
-from training_data_contoh import *
+from training_data import *
 import cv2
 import numpy as np
 

@@ -31,7 +31,7 @@ def training():
 			#known_face_names = ["fadel","daffa"]
 			pbar.update(1)
 		except:
-			print("looping nya error mas")
+			print("pass ya mas")
 	# Knows Face Encodings
 	print("known_face_encodings = [", file=f)
 	tambah = 0

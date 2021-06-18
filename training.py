@@ -2,7 +2,7 @@
 from tqdm import tqdm
 import os
 
-openFile = "training_data_contoh.py"
+openFile = "training_data.py"
 
 def training():
 	os.remove(openFile)

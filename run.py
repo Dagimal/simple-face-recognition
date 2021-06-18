@@ -58,7 +58,11 @@ def photoFaceRecognition():
 def liveCamera():
 	os.system("python webcam.py")
 
+def trainingData():
+	os.system("python training.py")
+
 def mainMenu():
+	print("[0] TRAINING DATA")
 	print("[1] PHOTO RECOGNITION")
 	print("[2] LIVE RECOGNITION")
 
@@ -71,6 +75,8 @@ if choice == "1":
 	photoFaceRecognition()
 elif choice == "2":
 	liveCamera()
+elif choice == "0":
+	trainingData()
 else:
 	print("INPUTAN SALAH!!!")
 	exit()
